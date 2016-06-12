@@ -34,4 +34,8 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/home', 'HomeController@index');
+
+    Route::get ('/new_article', function () {
+       return view('new_article');
+    });
 });
