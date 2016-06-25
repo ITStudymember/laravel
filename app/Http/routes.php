@@ -35,7 +35,11 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('/home', 'HomeController@index');
 
-    Route::get ('/new_article', function () {
-       return view('new_article');
-    });
+   // Route::get ('/new_article', function () {
+   //    return view('new_article');
+   // });
+   
+   Route::get('/new_article', 'ArticleController@index');
+   Route::post('/new_article', 'ArticleController@store');
+   Route::delete('/new_article{article}', 'ArticleController@destory');
 });

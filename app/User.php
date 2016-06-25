@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Article;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -12,7 +13,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'id', 'name', 'email', 'password',
     ];
 
     /**
@@ -23,4 +24,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+    /**
+     * ìŽÒ‚Æ‹LŽ–‚ÌŠÖ˜A•t‚¯
+     */
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
 }

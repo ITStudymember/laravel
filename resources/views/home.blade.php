@@ -8,8 +8,15 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
-                </div>
+                	    You are logged in!
+                	<br>
+                	<br>
+                	<div class="form-group">
+                	    <button type="button" class="btn btn-default" onclick="location.href='/new_article'">
+                	        <i class="fa fa-plus"></i> Add Article
+                	    </button>
+                	</div>
+            	</div>
             </div>
         </div>
     </div>
